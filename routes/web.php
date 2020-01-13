@@ -21,3 +21,7 @@ Route::get('/logout', 'AuthController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::group(['prefix' => 'departments'], function (){
+    Route::get('/', 'DepartmentController@index');
+});
+
